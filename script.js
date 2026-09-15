@@ -1,21 +1,8 @@
 // get songs from folder 
 async function getsongs() {
+    let response = await fetch("./songs.json");
+    let songs = await response.json();
 
-    let song = await fetch("http://127.0.0.1:5500/Spotifyclone/songs/");
-
-    let response = await song.text();
-    let div = document.createElement("div");
-    //create element div put res on it
-    div.innerHTML = response;
-    //get link using anchatech "a"
-    let link = div.getElementsByTagName("a");
-    let songs = [];//array of songs
-    for (let i = 0; i < link.length; i++) {
-        let href = link[i].href;// this give  link of songs
-        if (href.endsWith(".mp3")) {
-            songs.push(href);//this push link in array
-        }
-    }
     return songs;
 }
 
