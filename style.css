@@ -224,21 +224,25 @@ h4 {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
 }
-
+.img-container{
+    position: relative;
+    width: 100%;
+}
 .play-btn {
     position: absolute;
-    bottom: 85px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
 
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 
     border: none;
     border-radius: 50%;
 
     background-color: #1ed760;
-    font-size: 25px;
+    font-size: 22px;
     cursor: pointer;
 
     opacity: 0;
@@ -839,8 +843,8 @@ h4 {
     .play-btn {
         width: 45px;
         height: 45px;
-        right: 15px;
-        bottom: 70px;
+        right: 10px;
+        bottom: 10px;
         font-size: 18px;
         opacity: 1;
         transform: none;
